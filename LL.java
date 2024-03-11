@@ -48,6 +48,19 @@ class LL{
         }
         currNode.next=null;
     }
+    public void getsize(){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node currNode = head;
+        int count =0;
+        while(currNode!=null){
+            count++;
+            currNode=currNode.next;
+        }
+        System.out.println("Size of list is: "+count);
+    }
     public void print(){
         if(head==null){
             System.out.println("List is empty");
@@ -69,7 +82,9 @@ class LL{
         list.print();
         // list.deleteFirst();
         // list.print();
+        list.getsize();
         list.deleteLast();
         list.print();
+        list.getsize();
     }
 }
