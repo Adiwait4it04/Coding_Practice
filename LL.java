@@ -61,6 +61,21 @@ class LL{
         }
         System.out.println("Size of list is: "+count);
     }
+    public void reverse(){
+        if(head==null){
+            System.out.println("List is empty");
+            return;
+        }
+        Node prev = head;
+        Node currNode = head.next;
+        while(currNode!=null){
+            Node nextNode = currNode.next;
+            currNode.next = prev;
+            prev = currNode;
+            currNode = next;
+        }
+
+    }
     public void print(){
         if(head==null){
             System.out.println("List is empty");
