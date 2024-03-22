@@ -8,9 +8,20 @@ public class StackFW
             return;
         }        
         int top = s.pop();
-        System.out.println(s);
         pushatbottom(data,s);
         s.push(top);
+    }
+    public static void reverseStack(Stack<Integer> s){
+        if(s.isEmpty())
+        {
+            return;
+        }
+        int top=s.pop();
+        System.out.println(s);
+        reverseStack(s);
+        
+        pushatbottom(top,s);
+
     }
     public static void main(String args[]){
         Stack <Integer> n =new Stack<>();
@@ -19,7 +30,8 @@ public class StackFW
         n.push(3);
         n.push(4);
         n.push(5);
-        pushatbottom(7,n);
+        reverseStack(n);
+        // pushatbottom(7,n);
         while(!n.isEmpty()){
             System.out.println(n.peek());
             n.pop();
