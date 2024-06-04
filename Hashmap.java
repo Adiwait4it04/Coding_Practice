@@ -20,7 +20,7 @@ public static void main(String[] args) {
         System.out.println(e.getValue());
     }
     map.remove("US");
-    System.out.println(map);
+    System.out.println(map.keySet());
 
     }
 }
