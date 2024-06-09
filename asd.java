@@ -1,37 +1,41 @@
-class asd {
-    public String replaceWords(String dictionary[], String sentence) {
+import java.util.*;
+
+public class asd {
+    public String replaceWords(List<String> dictionary, String sentence) {
+        sentence = sentence + " ";
+        // Sort the dictionary by length of the root words in ascending order
+        Collections.sort(dictionary, Comparator.comparingInt(String::length));
+        String[] dictionaryArray = dictionary.toArray(new String[0]);
         String word = "", newword = "";
-        int c=0;
         for (int i = 0; i < sentence.length(); i++) {
-            c=0;
             char character = sentence.charAt(i);
             if (character != ' ') {
                 word = word + sentence.charAt(i);
             } else {
-                for (int j = 0; j < dictionary.length; j++) {
-                    String s = dictionary[j];
-                    if (word.contains(s)) {
-                        newword = newword + dictionary[j] + " ";
-                        System.out.println(newword);
-                        word="";
-                        c++;
+                boolean replaced = false;
+                for (String s : dictionaryArray) {
+                    if (word.startsWith(s)) {
+                        newword = newword + s + " ";
+                        word = "";
+                        replaced = true;
+                        break;  // Break the loop as soon as a root word is found
                     }
                 }
-                if(c==0)
-                {
+                if (!replaced) {
                     newword = newword + word + " ";
-                    System.out.println(newword);
-                    word="";
+                    word = "";
                 }
             }
         }
-        return newword;
+        return newword.trim();  // Use trim() to remove the trailing space
     }
 
     public static void main(String[] args) {
         asd obj = new asd();
-        String[] arr1 = { "cat", "bat", "rat" };
-        String sentence = "the cattle was rattled by the battery ";
-        System.out.println(obj.replaceWords(arr1, sentence));
+        List<String> al = new ArrayList<>();
+        al.add("catt");
+        al.add("cat");
+        String sentence = "cattail";
+        System.out.println(obj.replaceWords(al, sentence));
     }
 }
