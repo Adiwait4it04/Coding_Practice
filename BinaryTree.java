@@ -12,7 +12,7 @@ public class BinaryTree {
         }
     }
 
-    static class BinaryTree {
+    static class BinaryTrees {
         static int idx = -1;
         public static Node buildTree(int nodes[]) {
             idx++;
@@ -28,12 +28,12 @@ public class BinaryTree {
 
     public static void main(String args[]) {
         int nodes[] = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
-        BinaryTree tree = new BinaryTree();
+        BinaryTrees tree = new BinaryTrees();
         Node root = tree.buildTree(nodes);
         System.out.println(root.data);
         
         // Reset idx for a new test case
-        BinaryTree.idx = -1;
+        BinaryTrees.idx = -1;
         
         int nodes2[] = {1, 2, 3, -1, -1, 4, -1, -1, 5, -1, 6, -1, -1};
         Node root2 = tree.buildTree(nodes2);
