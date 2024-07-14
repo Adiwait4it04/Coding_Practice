@@ -1,5 +1,4 @@
-import java.io.*;
-import java.util.*;
+
 public class BinaryTree {
     static class Node {
         int data;
@@ -14,7 +13,7 @@ public class BinaryTree {
 
     static class BinaryTrees {
         static int idx = -1;
-        public static Node buildTree(int nodes[]) {
+        public Node buildTree(int nodes[]) {
             idx++;
             if(nodes[idx] == -1) {
                 return null;

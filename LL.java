@@ -72,7 +72,7 @@ class LL{
             Node nextNode = currNode.next;
             currNode.next = prev;
             prev = currNode;
-            currNode = next;
+            currNode = nextNode;
         }
 
     }
