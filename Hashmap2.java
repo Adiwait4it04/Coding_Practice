@@ -40,6 +40,6 @@ class Hashmap2
                 System.out.println("maa chuda");
                 break;
             }
-        }
+         }
     }
 }
