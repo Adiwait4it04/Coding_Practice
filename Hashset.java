@@ -13,10 +13,10 @@ public class Hashset {
         //  set.clear();
         // LinkedHashSet<Integer> hSet = new LinkedHashSet<>();//jis order mei gaya tha usme print hoga
         // TreeSet<Integer> tset = new TreeSet<>();//null value insert nahi kar sakte kyuki sort karta hai.
-        Iterator<Integer> it = set.iterator();
-        while (it.hasNext()) {
-            System.out.println(it.next());
-        }
+        // Iterator<Integer> it = set.iterator();
+        // while (it.hasNext()) {
+        //     System.out.println(it.next());
+        // }
+
     }
-    
 }
