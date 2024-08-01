@@ -1,7 +1,7 @@
 import java.util.HashMap;
 
 public class count {
-    public static void count(String str)
+    public static void  count(String str)
     {
         HashMap<Character,Integer> map= new HashMap<>();
         for(char c: str.toCharArray())
