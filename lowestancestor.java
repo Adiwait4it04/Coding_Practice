@@ -73,7 +73,7 @@ public class lowestancestor {
     public static void main(String args[])
     {
 
-        //         4 
+                //         4 
                 //      /     \
                 //     1       6
                 //    / \     / \

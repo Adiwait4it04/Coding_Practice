@@ -16,7 +16,7 @@ class Solution {
         for(int i=0;i<n;i++)
         {
             graphs[i]=new ArrayList<Edge>();
-            graphs[i].add(new Edge(edges[i][0],edges[i][1]));
+            graphs[i].add(new Edge(edge[i][0],edge[i][1]));
         }
         boolean visited[]= new boolean[n];
         return haspath(n,graphs,source,destination,visited);

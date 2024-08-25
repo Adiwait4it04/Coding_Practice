@@ -10,7 +10,6 @@ public class Subtree {
             this.right=null;
         }
     }
-
     public static int subtree(Node root)
     {
         if (root==null) {
